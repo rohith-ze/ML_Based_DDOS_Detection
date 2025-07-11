@@ -16,35 +16,34 @@
 
 ---
 
-##🔍 How It Works
--🧠 DDoS Detection
+## 🔍 How It Works
+## 🧠 DDoS Detection
+- Captures live packets using scapy
 
-    -Captures live packets using scapy
+- Groups packets by source-destination flows
 
-    -Groups packets by source-destination flows
+- Extracts flow-based features:
 
-    -Extracts flow-based features:
+    - Packet counts
 
-        -Packet counts
+    - Byte rates
 
-        -Byte rates
+    - Flag counts (SYN, ACK, RST)
 
-        -Flag counts (SYN, ACK, RST)
+- Uses a pre-trained Random Forest model to classify traffic
 
-    -Uses a pre-trained Random Forest model to classify traffic
+## 🐛 Malware Detection
 
--🐛 Malware Detection
+- Accepts user-uploaded .exe or .dll files
 
-    -Accepts user-uploaded .exe or .dll files
+- Extracts features using pefile:
 
-    -Extracts features using pefile:
+    - Number of sections
 
-        -Number of sections
+    - Entry point
 
-        -Entry point
+    - File size, timestamp
 
-        -File size, timestamp
-
-    -Classifies using a trained model
+- Classifies using a trained model
 
 
