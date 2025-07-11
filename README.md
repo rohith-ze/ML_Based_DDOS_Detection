@@ -14,35 +14,37 @@
 - ✅ Lightweight and modular Flask web server
 - ✅ Designed for local networks or test environments
 
-🔍 How It Works
-🧠 DDoS Detection
+---
 
-    Captures live packets using scapy
+##🔍 How It Works
+-🧠 DDoS Detection
 
-    Groups packets by source-destination flows
+    -Captures live packets using scapy
 
-    Extracts flow-based features:
+    -Groups packets by source-destination flows
 
-        Packet counts
+    -Extracts flow-based features:
 
-        Byte rates
+        -Packet counts
 
-        Flag counts (SYN, ACK, RST)
+        -Byte rates
 
-    Uses a pre-trained Random Forest model to classify traffic
+        -Flag counts (SYN, ACK, RST)
 
-🐛 Malware Detection
+    -Uses a pre-trained Random Forest model to classify traffic
 
-    Accepts user-uploaded .exe or .dll files
+-🐛 Malware Detection
 
-    Extracts features using pefile:
+    -Accepts user-uploaded .exe or .dll files
 
-        Number of sections
+    -Extracts features using pefile:
 
-        Entry point
+        -Number of sections
 
-        File size, timestamp
+        -Entry point
 
-    Classifies using a trained model
+        -File size, timestamp
+
+    -Classifies using a trained model
 
 
